@@ -83,8 +83,6 @@ class OrderTest {
     @Test
     void addObserver() {
         User Peter = new User("Peter");
-        assertEquals(Peter.getId(), 0);
-
         order.addObserver(Peter);
         assertNotNull(order.users);
         assertEquals(order.users.get(0), Peter);
@@ -105,6 +103,6 @@ class OrderTest {
         User Peter = new User("Peter");
         assertEquals(order.notifyObservers(), "");
         order.addObserver(Peter);
-        assertEquals(order.notifyObservers(), "Hello Peter, there're available the following items: [flowerstore.RomashkaFlower@399c4be1]");
+        assertEquals(order.notifyObservers(), "Hello Peter, there're available the following items: [romashka]");
     }
 }

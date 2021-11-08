@@ -7,4 +7,9 @@ public class RomashkaFlower extends Item {
     public double price() {
         return 40;
     }
+
+    @Override
+    public String toString() {
+        return "romashka";
+    }
 }

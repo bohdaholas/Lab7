@@ -79,7 +79,7 @@ public class Order implements Observed {
     public String notifyObservers() {
         String msgToObservers = "";
         for (Observer customer : users) {
-            msgToObservers += customer.handleEvent(itemsToStr());
+            msgToObservers += customer.handleEvent(itemsToStr()).toString();
         }
         return msgToObservers;
     }
